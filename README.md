@@ -1,12 +1,12 @@
 # Really Simple Gallery Widget #
 
-Contributors: helen
-Donate link: http://helen.wordpress.com/donate/
-Tags: gallery, widget
-Requires at least: 2.8
-Tested up to: 3.5
-Stable tag: 1.3
-License: GPLv2 or later
+Contributors: helen  
+Donate link: http://helen.wordpress.com/donate/  
+Tags: gallery, widget  
+Requires at least: 2.8  
+Tested up to: 3.5  
+Stable tag: 1.3  
+License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Simple widget for displaying images from the Media Library with plenty of configurable options.
