@@ -88,7 +88,9 @@ echo '
 }
 ?>
 	</select>
+</p>
 
+<p>
 	<span class="post_id_option<?php if ( 'post' != $instance['from'] ) echo ' hide-if-js'; ?>">
 		<label for="<?php echo $this->get_field_id( 'post_id' ); ?>"><?php _e( 'Page or post ID', 'rsgwidget' ); ?>:</label>
 		<input id="<?php echo $this->get_field_id( 'post_id' ); ?>" name="<?php echo $this->get_field_name( 'post_id' ); ?>" type="text" size="3" value="<?php echo esc_attr( $post_id ); ?>" />
@@ -145,7 +147,9 @@ echo '
 }
 ?>
 	</select>
+</p>
 
+<p>
 	<span class="rsgw_order_option<?php if ( 'rand' == $instance['orderby'] || ( 'menu_order' == $instance['orderby'] && 'ids' == $instance['from'] ) ) echo ' hide-if-js'; ?>">
 		<label class="hide-if-js" for="<?php echo $this->get_field_id( 'order' ); ?>"><?php _e( 'Order of images', 'rsgwidget' ); ?></label>
 		<select class="widefat" id="<?php echo $this->get_field_id( 'order' ); ?>" name="<?php echo $this->get_field_name( 'order' ); ?>">
