@@ -35,7 +35,7 @@ $instance_defaults = array (
 	'num_images'          => '0',
 	'show_captions'       => false,
 	'image_size'          => 'thumbnail',
-	'orderby',
+	'orderby'             => 'rand',
 	'order'               => 'asc',
 	'link_type'           => 'file',
 	'before_link_title'   => '',
