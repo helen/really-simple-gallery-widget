@@ -13,11 +13,11 @@ if ( ! class_exists( 'RSGWidget' ) ) {
 	class RSGWidget extends WP_Widget {
 		function RSGWidget() {
 			$widget_ops = array(
-				'classname' => 'widget_rsg',
-				'description' => __('Grab photos from a specified post/page or the entire media library and display them in a widget area.', 'rsg-widget' )
+				'classname'   => 'widget_rsg',
+				'description' => __( 'Grab photos from a specified post/page or the entire media library and display them in a widget area.', 'rsg-widget' )
 			);
 
-			$this->WP_Widget( 'RSGWidget', __('Really Simple Gallery Widget', 'rsg-widget' ), $widget_ops );
+			$this->WP_Widget( 'RSGWidget', __( 'Really Simple Gallery Widget', 'rsg-widget' ), $widget_ops );
 
 			add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
 		}

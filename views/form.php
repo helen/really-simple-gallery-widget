@@ -1,45 +1,45 @@
 <?php
 $from_options = array (
-	__( 'Full Media Library', 'rsgwidget' ) => 'full_library',
+	__( 'Full Media Library', 'rsgwidget' )    => 'full_library',
 	__( 'Specific Page or Post', 'rsgwidget' ) => 'post',
-	__( 'Attachment IDs', 'rsgwidget' ) => 'ids',
+	__( 'Attachment IDs', 'rsgwidget' )        => 'ids',
 );
 
 $orderby_options = array (
-	__( 'Random', 'rsgwidget' ) => 'rand',
-	__( 'Date', 'rsgwidget' ) => 'date',
+	__( 'Random', 'rsgwidget' )               => 'rand',
+	__( 'Date', 'rsgwidget' )                 => 'date',
 	__( 'Menu/Specified Order', 'rsgwidget' ) => 'menu_order',
-	__( 'Title', 'rsgwidget' ) => 'title',
+	__( 'Title', 'rsgwidget' )                => 'title',
 );
 
 $order_options = array (
-	__( 'Ascending', 'rsgwidget' ) => 'asc',
+	__( 'Ascending', 'rsgwidget' )  => 'asc',
 	__( 'Descending', 'rsgwidget' ) => 'desc',
 );
 
 $link_type_options = array (
-	__( 'File', 'rsgwidget' ) => 'file',
+	__( 'File', 'rsgwidget' )                => 'file',
 	__( 'Anchor on Post/Page', 'rsgwidget' ) => 'anchor',
-	__( 'Post/Page', 'rsgwidget' ) => 'post',
-	__( 'Attachment', 'rsgwidget' ) => 'attachment',
-	__( 'None', 'rsgwidget' ) => 'none',
+	__( 'Post/Page', 'rsgwidget' )           => 'post',
+	__( 'Attachment', 'rsgwidget' )          => 'attachment',
+	__( 'None', 'rsgwidget' )                => 'none',
 );
 
 $instance_defaults = array (
-	'title' => '',
-	'from' => 'full_library',
-	'post_id' => '',
-	'att_ids' => '',
-	'full_library' => false,
+	'title'               => '',
+	'from'                => 'full_library',
+	'post_id'             => '',
+	'att_ids'             => '',
+	'full_library'        => false,
 	'current_post_images' => false,
-	'num_images' => '0',
-	'show_captions' => false,
-	'image_size' => 'thumbnail',
+	'num_images'          => '0',
+	'show_captions'       => false,
+	'image_size'          => 'thumbnail',
 	'orderby',
-	'order' => 'asc',
-	'link_type' => 'file',
-	'before_link_title' => '',
-	'link_rel' => '',
+	'order'               => 'asc',
+	'link_type'           => 'file',
+	'before_link_title'   => '',
+	'link_rel'            => '',
 );
 
 // filter options and defaults

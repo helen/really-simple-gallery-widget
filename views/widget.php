@@ -24,13 +24,13 @@ elseif ( 'full_library' == $args['from'] ) {
 	$post_id = false;
 
 	$query_images_args = array(
-		'post_type' => 'attachment',
+		'post_type'      => 'attachment',
 		'post_mime_type' => 'image',
-		'post_status' => 'inherit',
-		'orderby' => $args['orderby'],
-		'order' => $args['order'],
+		'post_status'    => 'inherit',
+		'orderby'        => $args['orderby'],
+		'order'          => $args['order'],
 		'posts_per_page' => -1,
-		'no_found_rows' => true,
+		'no_found_rows'  => true,
 	);
 
 	// limited number of images
@@ -66,13 +66,13 @@ elseif ( 'ids' == $args['from'] ) {
 	$post_id = false;
 
 	$query_images_args = array(
-		'post_type' => 'attachment',
+		'post_type'      => 'attachment',
 		'post_mime_type' => 'image',
-		'post_status' => 'inherit',
-		'orderby' => $args['orderby'],
-		'order' => $args['order'],
+		'post_status'    => 'inherit',
+		'orderby'        => $args['orderby'],
+		'order'          => $args['order'],
 		'posts_per_page' => -1,
-		'no_found_rows' => true,
+		'no_found_rows'  => true,
 	);
 
 	// limited number of images
@@ -113,13 +113,13 @@ elseif ( 'ids' == $args['from'] ) {
 // using specific post ID or on single post/page
 if ( $post_id ) {
 	$query_images_args = array(
-		'post_parent' => $post_id,
-		'post_status' => 'inherit',
-		'post_type' => 'attachment',
+		'post_parent'    => $post_id,
+		'post_status'    => 'inherit',
+		'post_type'      => 'attachment',
 		'post_mime_type' => 'image',
-		'numberposts' => -1,
-		'orderby' => $args['orderby'],
-		'order' => $args['order'],
+		'numberposts'    => -1,
+		'orderby'        => $args['orderby'],
+		'order'          => $args['order'],
 	);
 
 	// limited number of images
@@ -133,12 +133,12 @@ if ( $post_id ) {
 	$attachments = get_children( $query_images_args );
 
 	if ( ! empty( $attachments ) ) {
-	  	foreach( $attachments as $id => $attachment ) {
-	  		$image = wp_get_attachment_image_src( $id, $args['image_size'] );
-	  		$image['ID'] = $id;
-	  		$image['title'] = $attachment->post_title;
-	  		$image['caption'] = $attachment->post_excerpt;
-	  		$images[] = $image;
+		foreach( $attachments as $id => $attachment ) {
+			$image = wp_get_attachment_image_src( $id, $args['image_size'] );
+			$image['ID'] = $id;
+			$image['title'] = $attachment->post_title;
+			$image['caption'] = $attachment->post_excerpt;
+			$images[] = $image;
 		}
 	}
 }
