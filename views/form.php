@@ -1,45 +1,45 @@
 <?php
 $from_options = array (
-	__( 'Full Media Library', 'rsgwidget' ) => 'full_library',
+	__( 'Full Media Library', 'rsgwidget' )    => 'full_library',
 	__( 'Specific Page or Post', 'rsgwidget' ) => 'post',
-	__( 'Attachment IDs', 'rsgwidget' ) => 'ids',
+	__( 'Attachment IDs', 'rsgwidget' )        => 'ids',
 );
 
 $orderby_options = array (
-	__( 'Random', 'rsgwidget' ) => 'rand',
-	__( 'Date', 'rsgwidget' ) => 'date',
+	__( 'Random', 'rsgwidget' )               => 'rand',
+	__( 'Date', 'rsgwidget' )                 => 'date',
 	__( 'Menu/Specified Order', 'rsgwidget' ) => 'menu_order',
-	__( 'Title', 'rsgwidget' ) => 'title',
+	__( 'Title', 'rsgwidget' )                => 'title',
 );
 
 $order_options = array (
-	__( 'Ascending', 'rsgwidget' ) => 'asc',
+	__( 'Ascending', 'rsgwidget' )  => 'asc',
 	__( 'Descending', 'rsgwidget' ) => 'desc',
 );
 
 $link_type_options = array (
-	__( 'File', 'rsgwidget' ) => 'file',
+	__( 'File', 'rsgwidget' )                => 'file',
 	__( 'Anchor on Post/Page', 'rsgwidget' ) => 'anchor',
-	__( 'Post/Page', 'rsgwidget' ) => 'post',
-	__( 'Attachment', 'rsgwidget' ) => 'attachment',
-	__( 'None', 'rsgwidget' ) => 'none',
+	__( 'Post/Page', 'rsgwidget' )           => 'post',
+	__( 'Attachment', 'rsgwidget' )          => 'attachment',
+	__( 'None', 'rsgwidget' )                => 'none',
 );
 
 $instance_defaults = array (
-	'title' => '',
-	'from' => 'full_library',
-	'post_id' => '',
-	'att_ids' => '',
-	'full_library' => false,
+	'title'               => '',
+	'from'                => 'full_library',
+	'post_id'             => '',
+	'att_ids'             => '',
+	'full_library'        => false,
 	'current_post_images' => false,
-	'num_images' => '0',
-	'show_captions' => false,
-	'image_size' => 'thumbnail',
-	'orderby',
-	'order' => 'asc',
-	'link_type' => 'file',
-	'before_link_title' => '',
-	'link_rel' => '',
+	'num_images'          => '0',
+	'show_captions'       => false,
+	'image_size'          => 'thumbnail',
+	'orderby'             => 'rand',
+	'order'               => 'asc',
+	'link_type'           => 'file',
+	'before_link_title'   => '',
+	'link_rel'            => '',
 );
 
 // filter options and defaults
@@ -88,7 +88,9 @@ echo '
 }
 ?>
 	</select>
+</p>
 
+<p>
 	<span class="post_id_option<?php if ( 'post' != $instance['from'] ) echo ' hide-if-js'; ?>">
 		<label for="<?php echo $this->get_field_id( 'post_id' ); ?>"><?php _e( 'Page or post ID', 'rsgwidget' ); ?>:</label>
 		<input id="<?php echo $this->get_field_id( 'post_id' ); ?>" name="<?php echo $this->get_field_name( 'post_id' ); ?>" type="text" size="3" value="<?php echo esc_attr( $post_id ); ?>" />
@@ -145,7 +147,9 @@ echo '
 }
 ?>
 	</select>
+</p>
 
+<p>
 	<span class="rsgw_order_option<?php if ( 'rand' == $instance['orderby'] || ( 'menu_order' == $instance['orderby'] && 'ids' == $instance['from'] ) ) echo ' hide-if-js'; ?>">
 		<label class="hide-if-js" for="<?php echo $this->get_field_id( 'order' ); ?>"><?php _e( 'Order of images', 'rsgwidget' ); ?></label>
 		<select class="widefat" id="<?php echo $this->get_field_id( 'order' ); ?>" name="<?php echo $this->get_field_name( 'order' ); ?>">
