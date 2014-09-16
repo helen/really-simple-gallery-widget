@@ -178,7 +178,7 @@ if ( ! empty( $images ) ) {
 		$item_link_type = $args['link_type'];
 
 		// no post parent - set this one to use a file link if links are being used
-		if ( $post_id == '0' )
+		if ( $post_id == '0' && 'none' != $item_link_type )
 			$item_link_type = 'file';
 
 		// filter what type of link to use - helpful if you need to deal with an individual item
