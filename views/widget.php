@@ -29,7 +29,7 @@ elseif ( 'full_library' == $args['from'] ) {
 		'post_status' => 'inherit',
 		'orderby' => $args['orderby'],
 		'order' => $args['order'],
-		'posts_per_page' => -1,
+		'posts_per_page' => 999, // This has an upper limit by default to avoid tragic queries
 		'no_found_rows' => true,
 	);
 
@@ -117,7 +117,7 @@ if ( $post_id ) {
 		'post_status' => 'inherit',
 		'post_type' => 'attachment',
 		'post_mime_type' => 'image',
-		'numberposts' => -1,
+		'numberposts' => 999, // This has an upper limit by default to avoid tragic queries
 		'orderby' => $args['orderby'],
 		'order' => $args['order'],
 	);
