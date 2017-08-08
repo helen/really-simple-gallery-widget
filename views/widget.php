@@ -117,14 +117,15 @@ if ( $post_id ) {
 		'post_status' => 'inherit',
 		'post_type' => 'attachment',
 		'post_mime_type' => 'image',
-		'numberposts' => 999, // This has an upper limit by default to avoid tragic queries
 		'orderby' => $args['orderby'],
 		'order' => $args['order'],
+		'posts_per_page' => 999, // This has an upper limit by default to avoid tragic queries
+		'no_found_rows' => true,
 	);
 
 	// limited number of images
 	if ( 0 != $args['num_images'] ) {
-		$query_images_args['numberposts'] = $args['num_images'];
+		$query_images_args['posts_per_page'] = $args['num_images'];
 	}
 
 	// filter the args used to query for images from a single specified post
