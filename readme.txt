@@ -1,10 +1,9 @@
 === Really Simple Gallery Widget ===
 Contributors: helen
-Donate link: http://helen.wordpress.com/donate/
 Tags: gallery, widget
 Requires at least: 2.8
-Tested up to: 3.5
-Stable tag: 1.3
+Tested up to: 4.8.1
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -65,6 +64,11 @@ See [Styling the Really Simple Gallery Widget](http://helen.wordpress.com/2011/0
 2. Sample display in Twenty Twelve with minimal styling added for spacing
 
 == Changelog ==
+
+= 1.4 =
+* Updated widget constructor to no longer throw notices.
+* Respect the "none" link type (props @sergeybiryukov).
+* Minor code cleanup.
 
 = 1.3 =
 * Fixed a bug caused by assuming that image sizes are named key-style.
